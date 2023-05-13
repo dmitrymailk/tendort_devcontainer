@@ -1,0 +1,18 @@
+{
+	"name": "DEV server TensorRT",
+	"shutdownAction": "none",
+	"extensions": [
+		"ms-python.python",
+		"donjayamanne.python-extension-pack",
+		"ms-python.black-formatter",
+		"ms-vsliveshare.vsliveshare",
+		"christian-kohler.path-intellisense",
+		"ms-toolsai.jupyter",
+	],
+	// Open the sub-folder with the source code
+	"workspaceFolder": "/code",
+	"workspaceMount": "source=${localWorkspaceFolder},target=/code,type=bind,consistency=delegated",
+	// "dockerComposeFile": "../docker-compose.dev.yml",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "tensorrt_server"
+}

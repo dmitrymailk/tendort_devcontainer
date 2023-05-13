@@ -1,0 +1,14 @@
+version: '3.3'
+services:
+  
+  tensorrt_server:
+    build: 
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      TEST: 123
+    command: /bin/sh -c "while sleep 100000000; do :; done"
+    volumes:
+      - ./:/code:cached
+
+
